@@ -58,3 +58,19 @@ volumes:
   sonarqube_extensions:
   sonarqube_bundled-plugins:
   postgres_data:
+
+************************************************************************************
+                            Desplegar Sonarqube
+************************************************************************************
+vi /etc/sysctl.conf
+vm.max_map_count=262144
+sudo sysctl -p
+
+
+docker stack deploy -c docker-compose.yml sonarqube
+docker service update --force sonarqube_sonarqube
+
+
+
+
+                            
