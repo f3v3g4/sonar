@@ -1,0 +1,5 @@
+resources:
+  - sonarqube/pv.yaml
+  - sonarqube/pvc.yaml
+  - sonarqube/deployment.yaml
+  - sonarqube/service.yaml
